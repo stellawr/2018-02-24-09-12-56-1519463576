@@ -2,7 +2,12 @@
 
 function choose_no_repeat_number(collection) {
 
-  //在这里写入代码
+  let result=[];
+  result.push(collection[0]);
+  for(let i=1;i<collection.length;i++)
+    if(collection[i]!=collection[i-1])
+      result.push(collection[i]);
+  return result;
 }
 
 module.exports = choose_no_repeat_number;
